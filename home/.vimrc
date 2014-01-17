@@ -1,3 +1,36 @@
+set nocompatible              " be iMproved
+filetype off                  " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" My bundles here:
+"
+" original repos on GitHub
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'mattn/emmet-vim'
+Bundle 'SirVer/ultisnips'
+Bundle 'Valloric/MatchTagAlways'
+Bundle 'kien/ctrlp.vim'
+Bundle 'davidhalter/jedi-vim'
+Bundle 'nanotech/jellybeans.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'ervandew/supertab'
+Bundle 'scrooloose/syntastic'
+Bundle 'tomtom/tlib_vim'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'nvie/vim-flake8'
+Bundle 'tpope/vim-sensible'
+Bundle 'LeonmanRolls/secret-batman'
+
+"Vim Scripts
+Bundle 'molokai'
+
+
 set t_Co=256
 
 noremap ; l
@@ -11,7 +44,6 @@ map <space> /
 inoremap jk <esc>
 inoremap kj <esc>
 
-execute pathogen#infect()
 syntax on
 filetype plugin indent on
 filetype indent on
