@@ -3,6 +3,6 @@ dotfiles
 
 The all important dotfiles
 
-Original location of all files is ~
+Run linkup.sh to install
 
-Use homesicke for portability, these dotfiles are a castle!
+Clone into home folder
