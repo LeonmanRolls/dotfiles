@@ -1,0 +1,9 @@
+snippet debug "Enable python debugger next time you run script" 
+import pdb
+pdb.set_trace()
+endsnippet
+
+snippet typetoarray "Convert a python type to an array" 
+def typeToArray(type):
+	[item for item in dir(type) if not item.startswith("__")]
+endsnippet
