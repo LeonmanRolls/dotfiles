@@ -12,6 +12,7 @@ Bundle 'gmarik/vundle'
 "
 " original repos on GitHub
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'justinmk/vim-sneak'
 Bundle 'mattn/emmet-vim'
 Bundle 'SirVer/ultisnips'
 Bundle 'Valloric/MatchTagAlways'
@@ -26,6 +27,9 @@ Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'nvie/vim-flake8'
 Bundle 'tpope/vim-sensible'
 Bundle 'LeonmanRolls/secret-batman'
+Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'terryma/vim-multiple-cursors'
+Bundle 'rhysd/clever-f.vim'
 
 "Vim Scripts
 Bundle 'molokai'
@@ -69,8 +73,16 @@ colorscheme molokai
 
 set expandtab
 
+"Custom leader and easymotion stuff
+let mapleader = ","
+"let g:sneak#streak = 1
+map <Leader> <Plug>(easymotion-prefix)
+"nmap s <Plug>(easymotion-s2l)
+"nmap t <Plug>(easymotion-t2l)
+
 "Nerdtree mapping
-map <C-n> :NERDTreeToggle<CR>
+map <F7> :NERDTreeToggle<CR>
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 "Shortcut fot closing tabs
 map <C-m> :tabclose<CR>
@@ -258,3 +270,13 @@ function! WatchForChanges(bufname, ...)
 endfunction
 
 WatchForChanges!
+
+set nobackup
+
+"Maximum line length
+highlight OverLength ctermbg=grey ctermfg=white guibg=#592929
+match OverLength /\%101v.\+/
+
+let &colorcolumn=join(range(101,999),",")
+highlight ColorColumn ctermbg=235 guibg=#2c2d27
+let &colorcolumn="100,".join(range(120,999),",")

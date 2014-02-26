@@ -1,0 +1,30 @@
+snippet controllerTest "CI controller test template" 
+<?php
+
+/**
+ * @group Controller
+ */
+
+class ${1:controllername}ControllerTest extends CIUnit_TestCase
+{
+	public function setUp()
+	{
+		// Set the tested controller
+		$this->CI = set_controller('$1');
+	}
+	
+	public function test$1Controller()
+	{
+		// Call the controllers method
+		$this->CI->index();
+		
+		// Fetch the buffered output
+		$out = output();
+		
+		// Check if the content is OK
+		$this->assertSame(0, preg_match('/(error|notice)/i', $out));              
+	}
+}
+
+?>
+endsnippet

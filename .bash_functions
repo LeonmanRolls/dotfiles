@@ -44,5 +44,17 @@ gbdel(){
 }
 
 grepirn(){
-       grep -irn "$1" . 
+       grep -irn "$1" .
+}
+
+findfolder(){
+        find / -iname "$1" -type d
+}
+
+findfile(){
+        find / -iname "$1"
+}
+
+Gen(){
+        > $1ControllerTest.php
 }

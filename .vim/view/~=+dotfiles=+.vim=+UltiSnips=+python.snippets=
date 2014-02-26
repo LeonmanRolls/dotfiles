@@ -101,7 +101,7 @@ setlocal wrap
 setlocal wrapmargin=0
 1
 normal zo
-let s:l = 3 - ((2 * winheight(0) + 20) / 40)
+let s:l = 3 - ((2 * winheight(0) + 33) / 66)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
