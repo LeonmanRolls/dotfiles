@@ -7,6 +7,7 @@ nnoremap <buffer> <silent> ]] /\(.*\%#\)\@!\_^\s*\zs\(\(abstract\s\+\|final\s\+
 setlocal keymap=
 setlocal noarabic
 setlocal noautoindent
+setlocal autoread
 setlocal nobinary
 setlocal bufhidden=
 setlocal buflisted
@@ -104,12 +105,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 53 - ((52 * winheight(0) + 32) / 65)
+let s:l = 8 - ((7 * winheight(0) + 33) / 66)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-53
-normal! 0
+8
+normal! 01l
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :

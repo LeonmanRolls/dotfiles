@@ -113,3 +113,5 @@ export PATH=$PATH:~/bin:~/tools
 set -o vi
 
 export TERM="xterm-256color"
+
+export CLOJURESCRIPT_HOME=/root/clojurescript
