@@ -38,6 +38,7 @@ Bundle 'vim-scripts/paredit.vim'
 "Vim Scripts
 Bundle 'molokai'
 
+set noswapfile
 
 set t_Co=256
 
@@ -85,6 +86,13 @@ map <Leader>n <plug>NERDTreeTabsToggle<CR>
 "Shortcut fot closing tabs
 map <C-m> :tabclose<CR>
 
+map <C-j> :tabp<CR>
+map <C-k> :tabn<CR>
+map <C-h> :tabm -1<CR>
+map <C-l> :tabm +1<CR>
+
+map <CR> /
+
 "Save and load folds automatically
 "autocmd BufWinLeave *.* mkview
 "autocmd BufWinEnter *.* silent loadview 
@@ -115,3 +123,4 @@ au Syntax * RainbowParenthesesLoadBraces
 "let g:paredit_mode = 0
 
 :set incsearch
+
