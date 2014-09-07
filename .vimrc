@@ -124,3 +124,4 @@ au Syntax * RainbowParenthesesLoadBraces
 
 :set incsearch
 
+"Git test
