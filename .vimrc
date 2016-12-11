@@ -5,7 +5,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 
 " My bundles here:
@@ -110,7 +110,7 @@ map <CR> /
 
 "Save and load folds automatically
 "autocmd BufWinLeave *.* mkview
-"autocmd BufWinEnter *.* silent loadview 
+"autocmd BufWinEnter *.* silent loadview
 
 "Disable auto commenting
 "autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -139,3 +139,5 @@ let g:paredit_mode = 0
 
 set incsearch
 
+"Remove whitespace on every write
+autocmd BufWritePre * %s/\s\+$//e
